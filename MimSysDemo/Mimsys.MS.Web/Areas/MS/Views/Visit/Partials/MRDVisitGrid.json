@@ -1,0 +1,73 @@
+{
+  "ViewID": "MS0453",
+  "ViewOrder": 0,
+  "GridType": 0,
+  "ReadOnly": false,
+  "PageSize": 10,
+  "ColumnDefinitions": [
+    {
+      "ColumnName": "Visit Code",
+      "FieldName": "VISTCODE",
+      "DataType": "String",
+      "IsEditable": false,
+      "HasFinder": true,
+      "Finder": {
+        "ViewID": "MS0453",
+        "ViewOrder": 0,
+        "Filter": "",
+        "DisplayFieldNames": [
+          "VISTCODE",
+          "VISTDATE",
+          "VISTTIME",
+          "PROVCODE",
+          "DEPCODE",
+          "DEPTNAME",
+          "PATCODE",
+          "PATNAME"
+        ],
+        "ReturnFieldNames": [
+          "VISTCODE"
+        ],
+        "InitKeyFieldNames": []
+      }
+    },
+    {
+      "ColumnName": "Visit Date",
+      "FieldName": "VISTDATE",
+      "DataType": "DateTime",
+      "IsEditable": false,
+      "HasFinder": true,
+      "Finder": {
+        "ViewID": "MS0453",
+        "ViewOrder": 0,
+        "Filter": "",
+        "DisplayFieldNames": [
+          "VISTCODE",
+          "VISTDATE",
+          "VISTTIME",
+          "PROVCODE",
+          "DEPCODE",
+          "DEPTNAME",
+          "PATCODE",
+          "PATNAME"
+        ],
+        "ReturnFieldNames": [
+          "VISTCODE"
+        ],
+        "InitKeyFieldNames": []
+      }
+    },
+    {
+      "ColumnName": "Patient Code",
+      "FieldName": "PATCODE",
+      "DataType": "String",
+      "IsEditable": true
+    },
+    {
+      "ColumnName": "Patient Name",
+      "FieldName": "PATNAME",
+      "DataType": "String",
+      "IsEditable": true
+    }
+  ]
+}

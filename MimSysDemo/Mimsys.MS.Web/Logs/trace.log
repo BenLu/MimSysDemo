@@ -1,0 +1,16 @@
+----------------------------------------
+Timestamp: 4/30/2024 9:41:38 PM
+
+Message: Information-[Tenant:OnPremise] [Company:VSTDAT] [Module:GetTenantInfo] [User:ADMIN] - Accessing credentials from IIS Session Cache. ProductUserId: d388d853-8815-5b93-a756-e3ad7d38251f TenantId: d388d853-8815-5b93-a756-e3ad7d38251f ScreenName: None SessionId: QURNSU4tVlNUREFU
+
+Machine Name: DESKTOP-QULD1JU
+
+----------------------------------------
+----------------------------------------
+Timestamp: 4/30/2024 9:41:38 PM
+
+Message: Information-[Tenant:OnPremise] [Company:VSTDAT] [Module:CreateSession] [User:ADMIN] - Ready to create a session. ProductUserId: d388d853-8815-5b93-a756-e3ad7d38251f TenantId: d388d853-8815-5b93-a756-e3ad7d38251f ScreenName: None SessionId: QURNSU4tVlNUREFU
+
+Machine Name: DESKTOP-QULD1JU
+
+----------------------------------------

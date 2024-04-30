@@ -1,9 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Navigation>
-
   <!--TODO configure the menus for integrated with sage 300c-->
   <!--Second Level Menu Item, define the menu showed on Sage 300 online portal menu bar-->
-
   <item>
     <MenuID>MS2000</MenuID>
     <MenuName>MS2000</MenuName>
@@ -23,9 +21,7 @@
     <IconName>../../../../Areas/MS/ExternalContent/icon_ms.png</IconName>
     <MenuBackGoundImage>../../../../Areas/MS/ExternalContent/bg_menu_ms.jpg</MenuBackGoundImage>
   </item>
-
   <!--Third Level Menu Items Section Starts-->
-
   <item>
     <MenuID>MS3000</MenuID>
     <MenuName>MS3000</MenuName>
@@ -43,9 +39,7 @@
     <IsWidget>false</IsWidget>
     <Isintelligence>false</Isintelligence>
   </item>
-
   <!--Fourth Level Menu Items Section Starts-->
-
   <item>
     <MenuID>MS4000</MenuID>
     <MenuName>MS4000</MenuName>
@@ -64,7 +58,23 @@
     <Isintelligence>false</Isintelligence>
     <ModuleName>MS</ModuleName>
   </item>
-
+  <item>
+    <MenuID>MS4001</MenuID>
+    <MenuName>MS4001</MenuName>
+    <ResourceKey>MSMSVisit</ResourceKey>
+    <ParentMenuID>MS3000</ParentMenuID>
+    <IsGroupHeader>false</IsGroupHeader>
+    <ScreenURL>MS/MSVisit</ScreenURL>
+    <MenuItemLevel>4</MenuItemLevel>
+    <MenuItemOrder>2</MenuItemOrder>
+    <ColOrder>1</ColOrder>
+    <SecurityResourceKey>MSMSVisit</SecurityResourceKey>
+    <IsReport>false</IsReport>
+    <IsActive>true</IsActive>
+    <IsGroupEnd>false</IsGroupEnd>
+    <IsWidget>false</IsWidget>
+    <Isintelligence>false</Isintelligence>
+    <ModuleName>MS</ModuleName>
+  </item>
   <!--Fourth Level Menu Items Section End-->
-
 </Navigation>

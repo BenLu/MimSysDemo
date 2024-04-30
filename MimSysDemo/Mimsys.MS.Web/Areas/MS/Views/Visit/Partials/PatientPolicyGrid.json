@@ -1,0 +1,87 @@
+{
+  "ViewID": "MS0515",
+  "ViewOrder": 0,
+  "GridType": 0,
+  "ReadOnly": false,
+  "PageSize": 10,
+  "ColumnDefinitions": [
+    {
+      "ColumnName": "Patient Code",
+      "FieldName": "PATCODE",
+      "DataType": "String",
+      "IsEditable": false,
+      "HasFinder": true,
+      "Finder": {
+        "ViewID": "MS0515",
+        "ViewOrder": 0,
+        "Filter": "",
+        "DisplayFieldNames": [
+          "PATCODE",
+          "INSCOMP",
+          "INSPOLCY",
+          "POLCYNO",
+          "STARTDT",
+          "EXPIRYDT",
+          "DEDCTBAL",
+          "COPAY"
+        ],
+        "ReturnFieldNames": [
+          "PATCODE"
+        ],
+        "InitKeyFieldNames": []
+      }
+    },
+    {
+      "ColumnName": "Medical Aid  Company",
+      "FieldName": "INSCOMP",
+      "DataType": "String",
+      "IsEditable": false,
+      "HasFinder": true,
+      "Finder": {
+        "ViewID": "MS0515",
+        "ViewOrder": 0,
+        "Filter": "",
+        "DisplayFieldNames": [
+          "PATCODE",
+          "INSCOMP",
+          "INSPOLCY",
+          "POLCYNO",
+          "STARTDT",
+          "EXPIRYDT",
+          "DEDCTBAL",
+          "COPAY"
+        ],
+        "ReturnFieldNames": [
+          "PATCODE"
+        ],
+        "InitKeyFieldNames": []
+      }
+    },
+    {
+      "ColumnName": "Plan Code",
+      "FieldName": "INSPOLCY",
+      "DataType": "String",
+      "IsEditable": false,
+      "HasFinder": true,
+      "Finder": {
+        "ViewID": "MS0515",
+        "ViewOrder": 0,
+        "Filter": "",
+        "DisplayFieldNames": [
+          "PATCODE",
+          "INSCOMP",
+          "INSPOLCY",
+          "POLCYNO",
+          "STARTDT",
+          "EXPIRYDT",
+          "DEDCTBAL",
+          "COPAY"
+        ],
+        "ReturnFieldNames": [
+          "PATCODE"
+        ],
+        "InitKeyFieldNames": []
+      }
+    }
+  ]
+}

@@ -18,6 +18,13 @@ namespace Mimsys.MS.BusinessRepository
         /// </summary>
         public const string MSImport = "MSImport";
 
+		/// <summary>
+		/// Security resourceID for MS MSVisit
+		/// </summary>
+
+		public const string MSMSVisit = "MSMSVISIT";
+
+
         // TODO: Add other Security Resource strings here
 
     }

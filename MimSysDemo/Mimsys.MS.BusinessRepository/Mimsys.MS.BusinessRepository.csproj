@@ -82,9 +82,13 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mappers\MRDVisitMapper.cs" />
+    <Compile Include="Mappers\MSVisitMapper.cs" />
+    <Compile Include="Mappers\PatientPolicyMapper.cs" />
     <Compile Include="Menu\MSMenuModuleHelper.cs" />
     <Compile Include="Security\Security.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VisitRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Mimsys.MS.Interfaces\Mimsys.MS.Interfaces.csproj">

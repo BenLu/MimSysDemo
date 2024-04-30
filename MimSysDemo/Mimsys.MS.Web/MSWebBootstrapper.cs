@@ -1,5 +1,9 @@
-﻿/* Copyright (c) 2024 Mimsys  All rights reserved. */
+/* Copyright (c) 2024 Mimsys  All rights reserved. */
 
+using Mimsys.MS.Models;
+using Mimsys.MS.Web.Areas.MS.Controllers;
+using Sage.CA.SBS.ERP.Sage300.Common.Web.Controllers.ExportImport;
+using Mimsys.MS.Interfaces.BusinessRepository;
 using Microsoft.Practices.Unity;
 using Sage.CA.SBS.ERP.Sage300.Common.Interfaces.Bootstrap;
 using Sage.CA.SBS.ERP.Sage300.Common.Interfaces.Controller;
@@ -36,6 +40,7 @@ namespace Mimsys.MS.Web
         /// <param name="container">The Unity container</param>
         private void RegisterController(IUnityContainer container)
         {
+			UnityUtil.RegisterType<IController, VisitController>(container, "MSVisit");
         }
 
         /// <summary>
@@ -44,6 +49,7 @@ namespace Mimsys.MS.Web
         /// <param name="container">The Unity container</param>
         private void RegisterExportImportController(IUnityContainer container)
         {
+			UnityUtil.RegisterType<IExportImportController, ImportExportControllerInternal<IVisitRepository>>(container, "msvisit", new InjectionConstructor(typeof(Context)));
         }
     }
 }

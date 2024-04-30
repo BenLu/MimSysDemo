@@ -1,0 +1,83 @@
+@* Copyright (c) 2024 Mimsys  All rights reserved. *@
+
+@model Mimsys.MS.Web.Areas.MS.Models.VisitViewModel
+@using MSVisitResx = Mimsys.MS.Resources.Forms.MSVisitResx
+@using Mimsys.MS.Web.Areas.MS.Constants
+@using Sage.CA.SBS.ERP.Sage300.Common.Web.AreaConstants
+@using Sage.CA.SBS.ERP.Sage300.Common.Resources
+@using Sage.CA.SBS.ERP.Sage300.Common.Web.HtmlHelperExtension
+@using Sage.CA.SBS.ERP.Sage300.Common.Models.Enums
+@using AnnotationsResx = Sage.CA.SBS.ERP.Sage300.Common.Resources.AnnotationsResx
+
+<script type="text/javascript">
+    @Html.ConvertToJsVariableUsingNewtonSoft("VisitViewModel", Model)
+</script>
+
+@Html.Partial("~/Areas/MS/Views/Visit/Partials/_Localization.cshtml")
+@Html.Partial(Core.HamburgerMenu)
+@Html.Partial(Core.GridPreferences)
+
+<div id="success" class="message"></div>
+
+<div class="form-screen">
+    <div id="message"></div>
+    <header>
+        <section class="header-group-1">
+            <div class="header-wrapper">
+                <div class="header-headline">
+                    @Html.SageHeader1Label("VisitHeader", MSVisitResx.Entity)
+                </div>
+                @Html.Partial(Core.OptionsMenu, Model.UserAccess)
+                <div class="header-options">
+                    @if (Model.UserAccess.SecurityType.HasFlag(SecurityType.Modify))
+                    {
+                        @Html.KoSageButton("btnNew", null, new { @value = CommonResx.CreateNew, @id = "btnNew", @class = "btn btn-primary" })
+                    }
+                </div>
+            </div>
+            <div class="flag-required">
+                <span class="req-option">@CommonResx.RequiredLegend</span>
+            </div>
+        </section>
+    </header>
+    <div class="form-group" >
+        <div class="input-group" >
+            @Html.SgTextFor(model => model.Data.VisitCode, 
+                new { @sagevalue = "Data.VisitCode", @sagedisable = "Data.IsVisitCodeDisabled" }, 
+                new { @id = "txtVisitCode", @class = "txt-upper" },  size: "default", labelHtmlAttrs: new { @class = "required" })
+        </div>
+    </div>
+    <div class="form-group" >
+        <div class="datepicker-group" >
+            @Html.SgDatepickerFor(model => model.Data.VisitDate, 
+                new { @sageDatePicker = "Data.VisitDate", @sagedisable = "Data.IsVisitDateDisabled" }, 
+                new { @id = "txtVisitDate" })
+        </div>
+    </div>
+    <div class="grid-group" >
+        <div class="dropdown-group" >
+            @Html.SgDropdownFor(model => model.Data.VisitType,
+                new { @value = "Data.VisitType", @sagedisable = "Data.IsVisitTypeDisabled" }, new { @id = "ddlVisitType", @class = "single-select" },
+                selectList: Model.GetVisitType, size: "small")
+        </div>
+  @Html.SageGrid("patientPolicyGrid", (Sage.CA.SBS.ERP.Sage300.Common.Models.GridDefinition)@ViewBag.PatientPolicyGrid)
+    </div>
+    <div class="form-group" >
+        <div class="input-group" >
+            @Html.SgTextFor(model => model.Data.PatientCode, 
+                new { @sagevalue = "Data.PatientCode", @sagedisable = "Data.IsPatientCodeDisabled" }, 
+                new { @id = "txtPatientCode", @class = "txt-upper" },  size: "default")
+        </div>
+    </div>
+    <div class="grid-group" >
+  @Html.SageGrid("mRDVisitGrid", (Sage.CA.SBS.ERP.Sage300.Common.Models.GridDefinition)@ViewBag.MRDVisitGrid)
+    </div>
+
+    <section class="footer-group-1">
+        @if (Model.UserAccess.SecurityType.HasFlag(SecurityType.Modify))
+        {
+            @Html.KoSageButton("btnSave", new { }, new { @value = CommonResx.Save, @id = "btnSave", @class = "btn btn-primary" })
+            @Html.KoSageButton("btnDelete", new { }, new { @value = CommonResx.Delete, @id = "btnDelete", @class = "btn btn-primary" })
+        }
+    </section>
+</div>

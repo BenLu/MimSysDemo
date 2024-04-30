@@ -1,5 +1,7 @@
-﻿/* Copyright (c) 2024 Mimsys  All rights reserved. */
+/* Copyright (c) 2024 Mimsys  All rights reserved. */
 
+using Mimsys.MS.Interfaces.BusinessRepository;
+using Mimsys.MS.BusinessRepository;
 using Microsoft.Practices.Unity;
 using Sage.CA.SBS.ERP.Sage300.Common.Interfaces.Bootstrap;
 using Sage.CA.SBS.ERP.Sage300.Common.Interfaces.Entity;
@@ -33,6 +35,7 @@ namespace Mimsys.MS.Services
         /// <param name="container">The Unity container</param>
         private void RegisterService(IUnityContainer container)
         {
+			UnityUtil.RegisterType<IVisitRepository, VisitRepository>(container);
         }
 
         /// <summary>

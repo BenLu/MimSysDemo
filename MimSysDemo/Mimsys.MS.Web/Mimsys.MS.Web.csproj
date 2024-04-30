@@ -311,6 +311,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Areas\MS\Controllers\VisitController.cs" />
+    <Compile Include="Areas\MS\Controllers\VisitControllerInternal.cs" />
+    <Compile Include="Areas\MS\Models\VisitViewModel.cs" />
     <Compile Include="MSAreaRegistration.cs" />
     <Compile Include="MSWebBootstrapper.cs" />
     <Compile Include="BundleRegistration.cs" />
@@ -330,6 +333,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\MS\Scripts\Visit\Mimsys.MS.VisitBehaviour.js" />
+    <Content Include="Areas\MS\Scripts\Visit\Mimsys.MS.VisitKoExtn.js" />
+    <Content Include="Areas\MS\Scripts\Visit\Mimsys.MS.VisitRepository.js" />
     <Content Include="MSBootstrapper.xml" />
     <Content Include="MSMenuDetails.xml" />
     <Content Include="MergeISVProject.exe" />
@@ -402,7 +408,21 @@
     <Folder Include="Areas\MS\Controllers\Reports\" />
     <Folder Include="Areas\MS\Models\Process\" />
     <Folder Include="Areas\MS\Models\Reports\" />
-    <Folder Include="Areas\MS\Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\MS\Views\Visit\Partials\_Visit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\MS\Views\Visit\Partials\MRDVisitGrid.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\MS\Views\Visit\Partials\PatientPolicyGrid.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\MS\Views\Visit\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\MS\Views\Visit\Partials\_Localization.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

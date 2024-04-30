@@ -1,0 +1,948 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ExternalMedication" xml:space="preserve">
+    <value>External Medication</value>
+  </data>
+  <data name="DepartmentCode" xml:space="preserve">
+    <value>Department Code</value>
+  </data>
+  <data name="ConsultationDescription" xml:space="preserve">
+    <value>Consultation Description</value>
+  </data>
+  <data name="PlanName" xml:space="preserve">
+    <value>Plan Name</value>
+  </data>
+  <data name="EncounterUniqueCode" xml:space="preserve">
+    <value>Encounter Unique Code</value>
+  </data>
+  <data name="OrdersFlag" xml:space="preserve">
+    <value>Orders Flag</value>
+  </data>
+  <data name="AuthorizationBy" xml:space="preserve">
+    <value>Authorization By</value>
+  </data>
+  <data name="Dermatology" xml:space="preserve">
+    <value>Dermatology</value>
+  </data>
+  <data name="BillNumber" xml:space="preserve">
+    <value>Bill Number</value>
+  </data>
+  <data name="ProvisionalICDCompleted" xml:space="preserve">
+    <value>Provisional ICD Completed</value>
+  </data>
+  <data name="SecondaryCustomerType" xml:space="preserve">
+    <value>Secondary Customer Type</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="CheckEncounterBillCreated" xml:space="preserve">
+    <value>Check Encounter/Bill Created</value>
+  </data>
+  <data name="IsDeductibleCollected" xml:space="preserve">
+    <value>Is Deductible Collected?</value>
+  </data>
+  <data name="GenerateA11Message" xml:space="preserve">
+    <value>Generate A11 Message</value>
+  </data>
+  <data name="MobileCheckIn" xml:space="preserve">
+    <value>Mobile Check In</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="IsRIAYATIConsent" xml:space="preserve">
+    <value>Is RIAYATI Consent?</value>
+  </data>
+  <data name="Consultation" xml:space="preserve">
+    <value>Consultation</value>
+  </data>
+  <data name="PreviousVisitProviderCode" xml:space="preserve">
+    <value>Previous Visit Provider Code</value>
+  </data>
+  <data name="AllergyFlag" xml:space="preserve">
+    <value>Allergy Flag</value>
+  </data>
+  <data name="AppointmentNumber" xml:space="preserve">
+    <value>Appointment No.</value>
+  </data>
+  <data name="VisitDepartmentNumber" xml:space="preserve">
+    <value>Visit Department Number</value>
+  </data>
+  <data name="IsVideoConsultation" xml:space="preserve">
+    <value>Is Video Consultation?</value>
+  </data>
+  <data name="ModifiedSecPolicyNumber" xml:space="preserve">
+    <value>Modified Sec. Policy No.</value>
+  </data>
+  <data name="Facility" xml:space="preserve">
+    <value>Facility</value>
+  </data>
+  <data name="CheckSpeciality" xml:space="preserve">
+    <value>Check Speciality</value>
+  </data>
+  <data name="TransferDate" xml:space="preserve">
+    <value>Transfer Date</value>
+  </data>
+  <data name="SpecialityDepartment" xml:space="preserve">
+    <value>Speciality Department</value>
+  </data>
+  <data name="Credit" xml:space="preserve">
+    <value>Credit</value>
+  </data>
+  <data name="EHRAlertMessage" xml:space="preserve">
+    <value>EHR Alert Message</value>
+  </data>
+  <data name="LabAutomation" xml:space="preserve">
+    <value>Lab Automation</value>
+  </data>
+  <data name="CustomerType" xml:space="preserve">
+    <value>Customer Type</value>
+  </data>
+  <data name="ReferenceDetail" xml:space="preserve">
+    <value>Reference Detail</value>
+  </data>
+  <data name="PatientCode" xml:space="preserve">
+    <value>Patient Code</value>
+  </data>
+  <data name="NursingAssessmentStatus" xml:space="preserve">
+    <value>Nursing Assessment Status</value>
+  </data>
+  <data name="UpdateVisit" xml:space="preserve">
+    <value>Update Visit</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="InsuranceName" xml:space="preserve">
+    <value>Insurance Name</value>
+  </data>
+  <data name="Dental" xml:space="preserve">
+    <value>Dental</value>
+  </data>
+  <data name="Cash" xml:space="preserve">
+    <value>Cash</value>
+  </data>
+  <data name="IsDisclosure" xml:space="preserve">
+    <value>Is Disclosure?</value>
+  </data>
+  <data name="CaseSelect" xml:space="preserve">
+    <value>Case Select</value>
+  </data>
+  <data name="VisitExpiryDate" xml:space="preserve">
+    <value>Visit Expiry Date</value>
+  </data>
+  <data name="InsuranceCompanyCode" xml:space="preserve">
+    <value>Insurance Company Code</value>
+  </data>
+  <data name="IsIntimated" xml:space="preserve">
+    <value>Is Intimated?</value>
+  </data>
+  <data name="AccidentPlace" xml:space="preserve">
+    <value>Accident Place</value>
+  </data>
+  <data name="HospitalName" xml:space="preserve">
+    <value>Hospital Name</value>
+  </data>
+  <data name="QueueNumber" xml:space="preserve">
+    <value>Queue Number</value>
+  </data>
+  <data name="TransferTime" xml:space="preserve">
+    <value>Transfer Time</value>
+  </data>
+  <data name="MultiVisitPackage" xml:space="preserve">
+    <value>Multi-Visit Package</value>
+  </data>
+  <data name="IPEMCode" xml:space="preserve">
+    <value>IP EM Code</value>
+  </data>
+  <data name="UpdateVisitInTriage" xml:space="preserve">
+    <value>Update Visit in Triage</value>
+  </data>
+  <data name="SecondaryPolicyNumber" xml:space="preserve">
+    <value>Secondary Policy No.</value>
+  </data>
+  <data name="IsPackagePatient" xml:space="preserve">
+    <value>Is Package Patient?</value>
+  </data>
+  <data name="InjuryIsOpen" xml:space="preserve">
+    <value>Injury is Open</value>
+  </data>
+  <data name="ClinicDescription" xml:space="preserve">
+    <value>Clinic Description</value>
+  </data>
+  <data name="PatientType" xml:space="preserve">
+    <value>Patient Type</value>
+  </data>
+  <data name="PharmacyVisit" xml:space="preserve">
+    <value>Pharmacy Visit</value>
+  </data>
+  <data name="AccidentRegCode" xml:space="preserve">
+    <value>Accident Reg. Code</value>
+  </data>
+  <data name="ConsultationTypeCode" xml:space="preserve">
+    <value>Consultation Type Code</value>
+  </data>
+  <data name="IsOrdered" xml:space="preserve">
+    <value>Is Ordered?</value>
+  </data>
+  <data name="UpdateProvider" xml:space="preserve">
+    <value>Update Provider</value>
+  </data>
+  <data name="Ophthalmology" xml:space="preserve">
+    <value>Ophthalmology</value>
+  </data>
+  <data name="ApplyCoPayLimit" xml:space="preserve">
+    <value>Apply Co-Pay Limit</value>
+  </data>
+  <data name="ReferralName" xml:space="preserve">
+    <value>Referral Name</value>
+  </data>
+  <data name="SOAPNumber" xml:space="preserve">
+    <value>SOAP No.</value>
+  </data>
+  <data name="MLCDescription" xml:space="preserve">
+    <value>MLC Description</value>
+  </data>
+  <data name="ExternalProvider" xml:space="preserve">
+    <value>External Provider</value>
+  </data>
+  <data name="AuthorizationNumber" xml:space="preserve">
+    <value>Authorization Number</value>
+  </data>
+  <data name="CheckOut" xml:space="preserve">
+    <value>Check Out</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="IsExtendEpisode" xml:space="preserve">
+    <value>Is Extend Episode?</value>
+  </data>
+  <data name="MLCCode" xml:space="preserve">
+    <value>MLC Code</value>
+  </data>
+  <data name="CheckPolicyExpiryDate" xml:space="preserve">
+    <value>Check Policy Expiry Date</value>
+  </data>
+  <data name="AlertFlag" xml:space="preserve">
+    <value>Alert Flag</value>
+  </data>
+  <data name="AgeMonths" xml:space="preserve">
+    <value>Age Months</value>
+  </data>
+  <data name="VisitExistEndTime" xml:space="preserve">
+    <value>Visit Exist End Time</value>
+  </data>
+  <data name="DiscountPercentage" xml:space="preserve">
+    <value>Discount Percentage</value>
+  </data>
+  <data name="LoadNursingFlexDetails" xml:space="preserve">
+    <value>Load Nursing Flex Details</value>
+  </data>
+  <data name="VisitTime" xml:space="preserve">
+    <value>Visit Time</value>
+  </data>
+  <data name="ReferralEmployeeCode" xml:space="preserve">
+    <value>Referral Employee Code</value>
+  </data>
+  <data name="DiscountCategoryCode" xml:space="preserve">
+    <value>Discount Category Code</value>
+  </data>
+  <data name="AdvanceAlert" xml:space="preserve">
+    <value>Advance Alert</value>
+  </data>
+  <data name="IsPreOrdered" xml:space="preserve">
+    <value>Is Pre-Ordered?</value>
+  </data>
+  <data name="Employer" xml:space="preserve">
+    <value>Employer</value>
+  </data>
+  <data name="IPAddress" xml:space="preserve">
+    <value>IP Address</value>
+  </data>
+  <data name="ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="VisitCode" xml:space="preserve">
+    <value>Visit Code</value>
+  </data>
+  <data name="SponsoredBy" xml:space="preserve">
+    <value>Sponsored By</value>
+  </data>
+  <data name="Maternity" xml:space="preserve">
+    <value>Maternity</value>
+  </data>
+  <data name="TransferBy" xml:space="preserve">
+    <value>Transfer By</value>
+  </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>Documentation</value>
+  </data>
+  <data name="UpdateVideoConsultation" xml:space="preserve">
+    <value>Update Video Consultation</value>
+  </data>
+  <data name="InsApplicationNumber" xml:space="preserve">
+    <value>Ins. Application Number</value>
+  </data>
+  <data name="ReferralProviderCode" xml:space="preserve">
+    <value>Referral Provider Code</value>
+  </data>
+  <data name="MultiVisitPackageOrderCode" xml:space="preserve">
+    <value>Multi-Visit Package Order Code</value>
+  </data>
+  <data name="Entity" xml:space="preserve">
+    <value>MS MSVisit</value>
+  </data>
+  <data name="HL7Message" xml:space="preserve">
+    <value>HL7 Message</value>
+  </data>
+  <data name="ClinicCode" xml:space="preserve">
+    <value>Clinic Code</value>
+  </data>
+  <data name="ReferenceType" xml:space="preserve">
+    <value>Reference Type</value>
+  </data>
+  <data name="AuthorizationStart" xml:space="preserve">
+    <value>Authorization Start</value>
+  </data>
+  <data name="DiscountCategoryDescription" xml:space="preserve">
+    <value>Discount Category Description</value>
+  </data>
+  <data name="GenerateA08Message" xml:space="preserve">
+    <value>Generate A08 Message</value>
+  </data>
+  <data name="UnitDescription" xml:space="preserve">
+    <value>Unit Description</value>
+  </data>
+  <data name="DepartmentWise" xml:space="preserve">
+    <value>Department wise</value>
+  </data>
+  <data name="Command" xml:space="preserve">
+    <value>Command</value>
+  </data>
+  <data name="GenerateLabPackageOrder" xml:space="preserve">
+    <value>Generate Lab/Package Order</value>
+  </data>
+  <data name="AdvanceUtilize" xml:space="preserve">
+    <value>Advance Utilize</value>
+  </data>
+  <data name="UpdateVisitCloseInEHR" xml:space="preserve">
+    <value>Update Visit Close in EHR</value>
+  </data>
+  <data name="PlanCode" xml:space="preserve">
+    <value>Plan Code</value>
+  </data>
+  <data name="Visit" xml:space="preserve">
+    <value>Visit</value>
+  </data>
+  <data name="GenerateOPBill" xml:space="preserve">
+    <value>Generate OP Bill</value>
+  </data>
+  <data name="SpecialCount" xml:space="preserve">
+    <value>Special Count</value>
+  </data>
+  <data name="OPLimitUtilized" xml:space="preserve">
+    <value>OP Limit Utilized</value>
+  </data>
+  <data name="GenCount" xml:space="preserve">
+    <value>Gen Count</value>
+  </data>
+  <data name="SpecialityDescription" xml:space="preserve">
+    <value>Speciality Description</value>
+  </data>
+  <data name="RegisterBills" xml:space="preserve">
+    <value>Register Bills</value>
+  </data>
+  <data name="VisitLevelCopay" xml:space="preserve">
+    <value>Visit level Copay</value>
+  </data>
+  <data name="AuthorizationDate" xml:space="preserve">
+    <value>Authorization Date</value>
+  </data>
+  <data name="SecondaryPolicyGroupCode" xml:space="preserve">
+    <value>Secondary Policy Group Code</value>
+  </data>
+  <data name="ReferralVisitCheck" xml:space="preserve">
+    <value>Referral Visit Check</value>
+  </data>
+  <data name="GenerateA04Message" xml:space="preserve">
+    <value>Generate A04 Message</value>
+  </data>
+  <data name="ResultsFlag" xml:space="preserve">
+    <value>Results Flag</value>
+  </data>
+  <data name="PatientName" xml:space="preserve">
+    <value>Patient Name</value>
+  </data>
+  <data name="SendToProvider" xml:space="preserve">
+    <value>Send to Provider</value>
+  </data>
+  <data name="PatientEmployerCode" xml:space="preserve">
+    <value>Patient Employer Code</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+  </data>
+  <data name="IsMLC" xml:space="preserve">
+    <value>Is MLC?</value>
+  </data>
+  <data name="VisitType" xml:space="preserve">
+    <value>Visit Type</value>
+  </data>
+  <data name="OtherReferrals" xml:space="preserve">
+    <value>Other Referrals</value>
+  </data>
+  <data name="SecondaryPlanCode" xml:space="preserve">
+    <value>Secondary Plan Code</value>
+  </data>
+  <data name="EpisodeCode" xml:space="preserve">
+    <value>Episode Code</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="InjuryCode" xml:space="preserve">
+    <value>Injury Code</value>
+  </data>
+  <data name="GetTheServerDate" xml:space="preserve">
+    <value>Get the Server Date</value>
+  </data>
+  <data name="DeductibleAmount" xml:space="preserve">
+    <value>Deductible Amount</value>
+  </data>
+  <data name="SecondaryCustomerCode" xml:space="preserve">
+    <value>Secondary Customer Code</value>
+  </data>
+  <data name="ValidateSaveProcess" xml:space="preserve">
+    <value>Validate Save Process</value>
+  </data>
+  <data name="PackageType" xml:space="preserve">
+    <value>Package Type</value>
+  </data>
+  <data name="Authorized" xml:space="preserve">
+    <value>Authorized</value>
+  </data>
+  <data name="EpisodeNumber" xml:space="preserve">
+    <value>Episode Number</value>
+  </data>
+  <data name="PostSurgical" xml:space="preserve">
+    <value>Post Surgical</value>
+  </data>
+  <data name="VisitFromAppointment" xml:space="preserve">
+    <value>Visit From Appointment</value>
+  </data>
+  <data name="Network" xml:space="preserve">
+    <value>Network</value>
+  </data>
+  <data name="IsReferring" xml:space="preserve">
+    <value>Is Referring?</value>
+  </data>
+  <data name="MessageCenterFlag" xml:space="preserve">
+    <value>Message Center Flag</value>
+  </data>
+  <data name="InitialAssessmentFlag" xml:space="preserve">
+    <value>Initial Assessment Flag</value>
+  </data>
+  <data name="IsChronic" xml:space="preserve">
+    <value>Is Chronic?</value>
+  </data>
+  <data name="RegistrationDate" xml:space="preserve">
+    <value>Registration Date</value>
+  </data>
+  <data name="DeliveryOrder" xml:space="preserve">
+    <value>Delivery Order</value>
+  </data>
+  <data name="VisitClosed" xml:space="preserve">
+    <value>Visit Closed</value>
+  </data>
+  <data name="Others" xml:space="preserve">
+    <value>Other's</value>
+  </data>
+  <data name="VisitPurpose" xml:space="preserve">
+    <value>Visit Purpose</value>
+  </data>
+  <data name="NumberOfBills" xml:space="preserve">
+    <value>No.Of Bills</value>
+  </data>
+  <data name="Manual" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="CheckedIn" xml:space="preserve">
+    <value>CheckedIn</value>
+  </data>
+  <data name="LimitBalance" xml:space="preserve">
+    <value>Limit Balance</value>
+  </data>
+  <data name="LimitUtilized" xml:space="preserve">
+    <value>Limit Utilized</value>
+  </data>
+  <data name="Failure" xml:space="preserve">
+    <value>Failure</value>
+  </data>
+  <data name="IsFreeVisit" xml:space="preserve">
+    <value>Is Free Visit?</value>
+  </data>
+  <data name="TransferReason" xml:space="preserve">
+    <value>Transfer Reason</value>
+  </data>
+  <data name="ConsultationCount" xml:space="preserve">
+    <value>Consultation Count</value>
+  </data>
+  <data name="LoadInsuranceDetailsToPolicyHeader" xml:space="preserve">
+    <value>Load Insurance details to Policy header</value>
+  </data>
+  <data name="PolicyGroupDescription" xml:space="preserve">
+    <value>Policy Group Description</value>
+  </data>
+  <data name="EligibleType" xml:space="preserve">
+    <value>Eligible Type</value>
+  </data>
+  <data name="SecondaryPolicyStartDate" xml:space="preserve">
+    <value>Secondary Policy Start Date</value>
+  </data>
+  <data name="NonReferral" xml:space="preserve">
+    <value>Non Referral</value>
+  </data>
+  <data name="InjuryValidationRequired" xml:space="preserve">
+    <value>Injury Validation Required</value>
+  </data>
+  <data name="EmployeeName" xml:space="preserve">
+    <value>Employee Name</value>
+  </data>
+  <data name="DepartmentName" xml:space="preserve">
+    <value>Department Name</value>
+  </data>
+  <data name="ConsultName" xml:space="preserve">
+    <value>Consult Name</value>
+  </data>
+  <data name="ConsultationCheck" xml:space="preserve">
+    <value>Consultation Check</value>
+  </data>
+  <data name="IsSecondaryPlan" xml:space="preserve">
+    <value>Is Secondary Plan?</value>
+  </data>
+  <data name="FallRiskFlag" xml:space="preserve">
+    <value>Fall Risk Flag</value>
+  </data>
+  <data name="ConsultationSetup" xml:space="preserve">
+    <value>Consultation Setup</value>
+  </data>
+  <data name="Immunization" xml:space="preserve">
+    <value>Immunization</value>
+  </data>
+  <data name="BillingCode" xml:space="preserve">
+    <value>Billing Code</value>
+  </data>
+  <data name="CheckTime" xml:space="preserve">
+    <value>Check Time</value>
+  </data>
+  <data name="AutomateLabCollection" xml:space="preserve">
+    <value>Automate Lab Collection</value>
+  </data>
+  <data name="FinalICDCompleted" xml:space="preserve">
+    <value>Final ICD Completed</value>
+  </data>
+  <data name="CriedtPatient" xml:space="preserve">
+    <value>Criedt Patient</value>
+  </data>
+  <data name="PoliceStationName" xml:space="preserve">
+    <value>Police Station Name</value>
+  </data>
+  <data name="InsertVisit" xml:space="preserve">
+    <value>Insert Visit</value>
+  </data>
+  <data name="DiscountAmount" xml:space="preserve">
+    <value>Discount Amount</value>
+  </data>
+  <data name="ProviderName" xml:space="preserve">
+    <value>Provider Name</value>
+  </data>
+  <data name="TypeOfVisit" xml:space="preserve">
+    <value>Type Of Visit</value>
+  </data>
+  <data name="AuthorizationEnd" xml:space="preserve">
+    <value>Authorization End</value>
+  </data>
+  <data name="PatientComplainFlag" xml:space="preserve">
+    <value>Patient Complain Flag</value>
+  </data>
+  <data name="CheckOPAdvance" xml:space="preserve">
+    <value>Check OP Advance</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="IsFallRisk" xml:space="preserve">
+    <value>Is Fall Risk?</value>
+  </data>
+  <data name="Rejected" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="NotSelected" xml:space="preserve">
+    <value>Not Selected</value>
+  </data>
+  <data name="InitialVisit" xml:space="preserve">
+    <value>Initial Visit</value>
+  </data>
+  <data name="ApplyVisitLimit" xml:space="preserve">
+    <value>Apply Visit Limit</value>
+  </data>
+  <data name="UpdateLabPrintStatus" xml:space="preserve">
+    <value>Update Lab Print Status</value>
+  </data>
+  <data name="ProviderCode" xml:space="preserve">
+    <value>Provider Code</value>
+  </data>
+  <data name="VisitDate" xml:space="preserve">
+    <value>Visit Date</value>
+  </data>
+  <data name="CheckOutTime" xml:space="preserve">
+    <value>Check Out Time</value>
+  </data>
+  <data name="GeneralVisit" xml:space="preserve">
+    <value>General Visit</value>
+  </data>
+  <data name="IsConsultation" xml:space="preserve">
+    <value>Is Consultation?</value>
+  </data>
+  <data name="UnitCode" xml:space="preserve">
+    <value>Unit Code</value>
+  </data>
+  <data name="PackageDescription" xml:space="preserve">
+    <value>Package Description</value>
+  </data>
+  <data name="AvailFirst" xml:space="preserve">
+    <value>Avail First</value>
+  </data>
+  <data name="CancelVisit" xml:space="preserve">
+    <value>Cancel Visit</value>
+  </data>
+  <data name="MobileApp" xml:space="preserve">
+    <value>Mobile App</value>
+  </data>
+  <data name="Procedure" xml:space="preserve">
+    <value>Procedure</value>
+  </data>
+  <data name="ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+  </data>
+  <data name="SpecialityCode" xml:space="preserve">
+    <value>Speciality Code</value>
+  </data>
+  <data name="VisitExistEnd" xml:space="preserve">
+    <value>VisitExistEnd</value>
+  </data>
+  <data name="TransferredAdmissionCode" xml:space="preserve">
+    <value>Transferred Admission Code</value>
+  </data>
+  <data name="AgeDays" xml:space="preserve">
+    <value>Age Days</value>
+  </data>
+  <data name="Billed" xml:space="preserve">
+    <value>Billed</value>
+  </data>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+  </data>
+  <data name="ExternalProviderCode" xml:space="preserve">
+    <value>External Provider Code</value>
+  </data>
+  <data name="ProviderWise" xml:space="preserve">
+    <value>Provider wise</value>
+  </data>
+  <data name="FollowUp" xml:space="preserve">
+    <value>Follow Up</value>
+  </data>
+  <data name="VisitModified" xml:space="preserve">
+    <value>Visit Modified</value>
+  </data>
+  <data name="PrescriptionType" xml:space="preserve">
+    <value>Prescription Type</value>
+  </data>
+  <data name="Existing" xml:space="preserve">
+    <value>Existing</value>
+  </data>
+  <data name="QueueNumber2" xml:space="preserve">
+    <value>Queue No.</value>
+  </data>
+  <data name="PolicyNumber" xml:space="preserve">
+    <value>Policy Number</value>
+  </data>
+  <data name="PolicyExpiryDate" xml:space="preserve">
+    <value>Policy Expiry Date</value>
+  </data>
+  <data name="SecondarySponsorCode" xml:space="preserve">
+    <value>Secondary Sponsor Code</value>
+  </data>
+  <data name="IsConsent" xml:space="preserve">
+    <value>Is Consent?</value>
+  </data>
+  <data name="ReVisit" xml:space="preserve">
+    <value>Re Visit</value>
+  </data>
+  <data name="NotDone" xml:space="preserve">
+    <value>Not Done</value>
+  </data>
+  <data name="NewVisit" xml:space="preserve">
+    <value>New Visit</value>
+  </data>
+  <data name="IntermediateVisit" xml:space="preserve">
+    <value>Intermediate Visit</value>
+  </data>
+  <data name="RequisitionNo" xml:space="preserve">
+    <value>Requisition No</value>
+  </data>
+  <data name="ReferredName" xml:space="preserve">
+    <value>Referred Name</value>
+  </data>
+  <data name="ReCalculatePreauthorization" xml:space="preserve">
+    <value>Re-Calculate PreAuthorization</value>
+  </data>
+  <data name="DefaultEMCode" xml:space="preserve">
+    <value>Default E&amp;&amp;M Code</value>
+  </data>
+  <data name="CaseTransfer" xml:space="preserve">
+    <value>Case Transfer</value>
+  </data>
+  <data name="ApplicationDate" xml:space="preserve">
+    <value>Application Date</value>
+  </data>
+  <data name="PolicyGroupCode" xml:space="preserve">
+    <value>Policy Group Code</value>
+  </data>
+  <data name="EpisodeNo" xml:space="preserve">
+    <value>Episode. No</value>
+  </data>
+  <data name="InsuranceCompany" xml:space="preserve">
+    <value>Insurance Company</value>
+  </data>
+  <data name="DoctorNotifyFlag" xml:space="preserve">
+    <value>Doctor Notify Flag</value>
+  </data>
+  <data name="MultiVisitPackageType" xml:space="preserve">
+    <value>Multi-Visit Package Type</value>
+  </data>
+  <data name="OPD" xml:space="preserve">
+    <value>OPD</value>
+  </data>
+  <data name="NonConsultation" xml:space="preserve">
+    <value>Non Consultation</value>
+  </data>
+  <data name="EligibleAmount" xml:space="preserve">
+    <value>Eligible Amount</value>
+  </data>
+  <data name="ExternalProviderName" xml:space="preserve">
+    <value>External Provider Name</value>
+  </data>
+  <data name="WoundCertifiedDate" xml:space="preserve">
+    <value>Wound Certified Date</value>
+  </data>
+  <data name="ConsultationType" xml:space="preserve">
+    <value>Consultation Type</value>
+  </data>
+  <data name="ModifiedPrimaryPolicyNo" xml:space="preserve">
+    <value>Modified Primary Policy No</value>
+  </data>
+  <data name="PackageCode" xml:space="preserve">
+    <value>Package Code</value>
+  </data>
+  <data name="OPLimitBalance" xml:space="preserve">
+    <value>OP Limit Balance</value>
+  </data>
+  <data name="IsEmergency" xml:space="preserve">
+    <value>Is Emergency?</value>
+  </data>
+  <data name="PolicyStartDate" xml:space="preserve">
+    <value>Policy Start Date</value>
+  </data>
+  <data name="PaidFollowUp" xml:space="preserve">
+    <value>Paid Follow Up</value>
+  </data>
+  <data name="Self" xml:space="preserve">
+    <value>Self</value>
+  </data>
+  <data name="MaternityPatient" xml:space="preserve">
+    <value>Maternity Patient</value>
+  </data>
+  <data name="FreeVisit" xml:space="preserve">
+    <value>FreeVisit</value>
+  </data>
+  <data name="Provider" xml:space="preserve">
+    <value>Provider</value>
+  </data>
+  <data name="DeductibleBalance" xml:space="preserve">
+    <value>Deductible Balance</value>
+  </data>
+  <data name="PreviousVisitDate" xml:space="preserve">
+    <value>Previous Visit Date</value>
+  </data>
+  <data name="StaticPackage" xml:space="preserve">
+    <value>Static Package</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="SecondaryPolicyExpiryDate" xml:space="preserve">
+    <value>Secondary Policy Expiry Date</value>
+  </data>
+  <data name="CheckBilled" xml:space="preserve">
+    <value>Check Billed</value>
+  </data>
+  <data name="Authorize" xml:space="preserve">
+    <value>Authorize</value>
+  </data>
+  <data name="CorporateClients" xml:space="preserve">
+    <value>Corporate Clients</value>
+  </data>
+  <data name="IsPreviousInitialVisit" xml:space="preserve">
+    <value>Is Previous Initial Visit?</value>
+  </data>
+  <data name="ReferenceCode" xml:space="preserve">
+    <value>Reference Code</value>
+  </data>
+  <data name="PreAuthorizationRequired" xml:space="preserve">
+    <value>Pre-Authorization Required</value>
+  </data>
+  <data name="ReferralVisit" xml:space="preserve">
+    <value>Referral Visit</value>
+  </data>
+  <data name="InvalidProcessCall" xml:space="preserve">
+    <value>Invalid Process Call</value>
+  </data>
+  <data name="ConsultBills" xml:space="preserve">
+    <value>Consult Bills</value>
+  </data>
+  <data name="AgeYears" xml:space="preserve">
+    <value>Age Years</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="SponsorCode" xml:space="preserve">
+    <value>Sponsor Code</value>
+  </data>
+</root>
