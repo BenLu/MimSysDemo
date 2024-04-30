@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Navigation>
+
+  <!--TODO configure the menus for integrated with sage 300c-->
+  <!--Second Level Menu Item, define the menu showed on Sage 300 online portal menu bar-->
+
+  <item>
+    <MenuID>MS2000</MenuID>
+    <MenuName>MS2000</MenuName>
+    <ResourceKey>MenuKey2000</ResourceKey>
+    <ParentMenuID>101</ParentMenuID>
+    <IsGroupHeader>false</IsGroupHeader>
+    <ScreenURL>N/A</ScreenURL>
+    <MenuItemLevel>2</MenuItemLevel>
+    <MenuItemOrder>4</MenuItemOrder>
+    <ColOrder>-1</ColOrder>
+    <SecurityResourceKey>N/A</SecurityResourceKey>
+    <IsReport>false</IsReport>
+    <IsActive>true</IsActive>
+    <IsGroupEnd>false</IsGroupEnd>
+    <IsWidget>false</IsWidget>
+    <Isintelligence>false</Isintelligence>
+    <IconName>../../../../Areas/MS/ExternalContent/icon_ms.png</IconName>
+    <MenuBackGoundImage>../../../../Areas/MS/ExternalContent/bg_menu_ms.jpg</MenuBackGoundImage>
+  </item>
+
+  <!--Third Level Menu Items Section Starts-->
+
+  <item>
+    <MenuID>MS3000</MenuID>
+    <MenuName>MS3000</MenuName>
+    <ResourceKey>MenuKey3000</ResourceKey>
+    <ParentMenuID>MS2000</ParentMenuID>
+    <IsGroupHeader>false</IsGroupHeader>
+    <ScreenURL>N/A</ScreenURL>
+    <MenuItemLevel>3</MenuItemLevel>
+    <MenuItemOrder>1</MenuItemOrder>
+    <ColOrder>-1</ColOrder>
+    <SecurityResourceKey>N/A</SecurityResourceKey>
+    <IsReport>false</IsReport>
+    <IsActive>true</IsActive>
+    <IsGroupEnd>false</IsGroupEnd>
+    <IsWidget>false</IsWidget>
+    <Isintelligence>false</Isintelligence>
+  </item>
+
+  <!--Fourth Level Menu Items Section Starts-->
+
+  <item>
+    <MenuID>MS4000</MenuID>
+    <MenuName>MS4000</MenuName>
+    <ResourceKey>MenuKey4000</ResourceKey>
+    <ParentMenuID>MS3000</ParentMenuID>
+    <IsGroupHeader>true</IsGroupHeader>
+    <ScreenURL>N/A</ScreenURL>
+    <MenuItemLevel>4</MenuItemLevel>
+    <MenuItemOrder>1</MenuItemOrder>
+    <ColOrder>1</ColOrder>
+    <SecurityResourceKey>N/A</SecurityResourceKey>
+    <IsReport>false</IsReport>
+    <IsActive>true</IsActive>
+    <IsGroupEnd>false</IsGroupEnd>
+    <IsWidget>false</IsWidget>
+    <Isintelligence>false</Isintelligence>
+    <ModuleName>MS</ModuleName>
+  </item>
+
+  <!--Fourth Level Menu Items Section End-->
+
+</Navigation>

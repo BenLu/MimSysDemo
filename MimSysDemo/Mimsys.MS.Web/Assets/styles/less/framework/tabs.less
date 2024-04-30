@@ -1,0 +1,620 @@
+//
+// Tabs
+// --------------------------------------------------
+
+// Base class
+// --------------------------------------------------
+
+.nav {
+  margin-bottom: 0;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  &:extend(.clearfix all);
+
+  > li {
+    position: relative;
+    display: block;
+
+    > a {
+      position: relative;
+      display: block;
+      padding: @nav-link-padding;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        background-color: @nav-link-hover-bg;
+      }
+    }
+
+    // Disabled state sets text to gray and nukes hover/tab effects
+    &.disabled > a {
+      color: @nav-disabled-link-color;
+
+      &:hover,
+      &:focus {
+        color: @nav-disabled-link-hover-color;
+        text-decoration: none;
+        background-color: transparent;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  // Open dropdowns
+  .open > a {
+    &,
+    &:hover,
+    &:focus {
+      background-color: @nav-link-hover-bg;
+      border-color: @link-color;
+    }
+  }
+
+  // Nav dividers (deprecated with v3.0.1)
+  //
+  // This should have been removed in v3 with the dropping of `.nav-list`, but
+  // we missed it. We don't currently support this anywhere, but in the interest
+  // of maintaining backward compatibility in case you use it, it's deprecated.
+  .nav-divider {
+    .nav-divider();
+  }
+
+  // Prevent IE8 from misplacing imgs
+  //
+  // See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
+  > li > a > img {
+    max-width: none;
+  }
+}
+
+
+// Tabs
+// -------------------------
+
+// Give the tabs something to sit on
+.nav-tabs {
+  > li {
+    float: left;
+    // Make the list-items overlay the bottom border
+    margin-bottom: -1px;
+
+    // Actual tabs (as links)
+    > a {
+      color: #2e2e2e;
+      font-weight: bold;
+      margin-right: 1px; 
+      padding-left: 15px; 
+      padding-right: 15px; 
+      cursor: pointer;
+      background-color: @gray-lighter;
+      background-image: none;
+      border-bottom: 0;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        background-color: @sage-gray;
+      }
+    }
+
+    // Disabled state sets text to gray and nukes hover/tab effects
+    &.disabled > a {
+      color: #9a9b9c;
+
+      &:hover,
+      &:focus {
+        color: #9a9b9c;
+        text-decoration: none;
+        cursor: not-allowed;
+      }
+    }
+
+    &.active:after {
+      content: "";
+      position: absolute;
+      left: -1px;
+      right: 0;
+      bottom: 0;
+      border-bottom: 4px solid @sage-mid-gray;
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @gray-darker;
+        cursor: default;
+        background-color: @white;
+        border: 1px solid @gray-lighter;
+        border-bottom-color: transparent;
+        border-bottom-color: transparent;
+        cursor: default;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        outline-offset: 0;
+        outline: #cdd6db solid 1px;
+      }
+    }
+  }
+  // pulling this in mainly for less shorthand
+  &.nav-justified {
+    .nav-justified();
+    .nav-tabs-justified();
+  }
+}
+
+.tab-content {
+  border-top: 1px solid @sage-mid-gray;
+  padding: 20px 0 0 0;
+
+  &.active {
+    border-top: 1px solid @sage-link;
+  }
+}
+
+header + .nav-tabs {
+  margin-top: -8px;
+}
+
+
+// Pills
+// -------------------------
+.nav-pills {
+  > li {
+    float: left;
+
+    // Links rendered as pills
+    > a {
+      border-radius: @nav-pills-border-radius;
+    }
+    + li {
+      margin-left: 2px;
+    }
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @nav-pills-active-link-hover-color;
+        background-color: @nav-pills-active-link-hover-bg;
+      }
+    }
+  }
+}
+
+
+// Stacked pills
+.nav-stacked {
+  > li {
+    float: none;
+    + li {
+      margin-top: 2px;
+      margin-left: 0; // no need for this gap between nav items
+    }
+  }
+}
+
+
+// Nav variations
+// --------------------------------------------------
+
+// Justified nav links
+// -------------------------
+
+.nav-justified {
+  width: 100%;
+
+  > li {
+    float: none;
+    > a {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+  }
+
+  > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+  }
+
+  @media (min-width: @screen-sm-min) {
+    > li {
+      display: table-cell;
+      width: 1%;
+      > a {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Move borders to anchors instead of bottom of list
+//
+// Mixin for adding on top the shared `.nav-justified` styles for our tabs
+.nav-tabs-justified {
+  border-bottom: 0;
+
+  > li > a {
+    // Override margin from .nav-tabs
+    margin-right: 0;
+    border-radius: @border-radius-base;
+  }
+
+  > .active > a,
+  > .active > a:hover,
+  > .active > a:focus {
+    border: 1px solid @nav-tabs-justified-link-border-color;
+  }
+
+  @media (min-width: @screen-sm-min) {
+    > li > a {
+      border-bottom: 1px solid @nav-tabs-justified-link-border-color;
+      border-radius: @border-radius-base @border-radius-base 0 0;
+    }
+    > .active > a,
+    > .active > a:hover,
+    > .active > a:focus {
+      border-bottom-color: @nav-tabs-justified-active-link-border-color;
+    }
+  }
+}
+
+
+// Tabbable tabs
+// -------------------------
+
+// Hide tabbable panes to start, show them when `.active`
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}
+
+
+// Dropdowns
+// -------------------------
+
+// Specific dropdowns
+.nav-tabs .dropdown-menu {
+  // make dropdown border overlap tab border
+  margin-top: -1px;
+  // Remove the top rounded corners here since there is a hard edge above the menu
+  .border-top-radius(0);
+}
+
+
+// Customzed Kendo Tabs
+ 
+.tab-group {
+    margin:0 auto 20px auto;
+}
+
+.k-tabstrip { 
+    border-width: 0px;  
+    background: none;
+
+    .k-tabstrip-items { 
+        padding: 0px;
+
+        .k-loading { 
+          border-top: none; 
+        }
+
+        .k-item { 
+          margin-right: 1px; 
+          padding-left: 15px; 
+          padding-right: 15px; 
+          cursor: pointer;
+          background-color: @gray-lighter;
+          padding-bottom: 0;
+          border: 0;
+          background-image: none;
+          border-bottom: 0;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+
+          .k-link { 
+              padding: 6px 0 10px; 
+              line-height: @line-height-base;
+              font-weight: bold;
+
+              label {
+                margin-bottom: 0;
+                cursor: pointer;
+              }
+          }
+
+          &:hover { 
+              background-color: @sage-gray;
+              -webkit-transition-duration: 0.2s;
+              transition-duration: 0.2s;
+              -webkit-transition-property: color, background-color;
+              transition-property: color, background-color;
+              
+                &:after {
+                  content: "";
+                  position: absolute;
+                  left: -1px;
+                  right: -1px;
+                  bottom: 2px;
+              }
+          }
+
+          &:focus {
+            outline: 3px solid @input-border-focus;
+            box-shadow: 3px solid @input-border-focus;
+            -webkit-box-shadow: 3px solid @input-border-focus;
+            -moz-box-shadow: 3px solid @input-border-focus;
+          }
+
+          &.k-state-active { 
+            background-color: @white;
+            border-bottom-color: transparent;
+            cursor: default;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            outline-offset: 0;
+            outline: @sage-gray solid 1px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: -1px;
+                right: -1px;
+                bottom: 0;
+                border-bottom: 4px solid @sage-mid-gray;
+            }
+
+            .k-link { 
+              color: @gray-darker;
+              font-weight: bold;
+            }
+
+            &:focus {
+              outline: 3px solid @input-border-focus;
+              box-shadow: 3px solid @input-border-focus;
+              -webkit-box-shadow: 3px solid @input-border-focus;
+              -moz-box-shadow: 3px solid @input-border-focus;
+            }
+          }
+
+          &.k-state-disabled,
+          &.k-state-disabled:hover {
+            background-color: @gray-lighter; 
+            border-color: @gray-lighter;
+            border-bottom: 0;
+
+            .k-link {
+            color: #9a9b9c; 
+            }
+          }
+        }
+
+        .k-first { 
+            margin-left: 0;
+        }
+
+        .k-icon.k-i-arrow-60-down {
+          top: 5px;
+        }
+    }
+
+    .k-content {
+      border: 0;
+      padding: 20px 0 0 0;
+      margin: 0;
+    }
+
+    .k-content.k-state-active { 
+        margin: 0px;  
+        padding: 20px 0 0 0; 
+        height: auto !important; //AT-30503
+        overflow: visible;
+        z-index: 1;
+        position: relative;
+        border-top: 1px solid @sage-mid-gray;
+        background-color: @gray-lighter;
+
+        h3 {
+        margin: 0 0 10px 0;
+        font-weight: bold;
+      }
+    }
+
+    &:focus {
+      -webkit-box-shadow: none; /* Kendo 2016.2 update */
+      box-shadow: none; /* Kendo 2016.2 update */
+    }
+}
+
+// Tab label padding control
+.small.k-tabstrip .k-tabstrip-items .k-item { 
+    padding-left: 10px; 
+    padding-right: 10px;
+}
+
+.smaller.k-tabstrip .k-tabstrip-items .k-item { 
+    padding-left: 8px; 
+    padding-right: 8px;
+}
+
+.xsmall.k-tabstrip .k-tabstrip-items .k-item { 
+    padding-left: 5px; 
+    padding-right: 5px;
+}
+
+// Added to disable Kendo scrollable tab styles
+
+.k-tabstrip-scrollable .k-tabstrip-items {
+  white-space: inherit;
+  overflow: inherit;
+  margin: 0 !important;
+}
+
+
+// Alternative solution to too many tabs scenario
+
+.tab-1 .tab-header {
+  margin: 16px 0 -1px 0;
+
+  .inline-txt {
+    margin-right: 4px;
+    margin-left: 0;
+  }
+
+  .dropdown-group {
+    margin: 0;
+  }
+
+  .k-dropdown {
+    height: auto !important;
+    width: 300px;
+
+    &.default  { width: 220px; }
+    &.medium   { width: 340px; }
+    &.large    { width: 460px; }
+    &.larger   { width: 700px; }
+
+   .k-dropdown-wrap {
+    padding: 0 36px 0 0;
+    height: 34px;
+    border-color: @sage-link;
+    border-bottom-color: @sage-mid-gray;
+
+    .k-input {
+      font-size: inherit;
+      line-height: 2.3;
+    }
+
+    .k-select {
+      width: 36px;
+      background: @sage-link none no-repeat;
+      border: none;
+
+      &:before {
+        content: "\25bc";
+        font-family: "Sage Armonye Icons";
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        speak: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        vertical-align: middle;
+        color: #fff;
+        font-size: 18px;
+        padding: 0 10px;
+        }
+      }
+
+      &.k-state-hover .k-select {
+        background: @sage-gray none no-repeat;
+      }
+    }
+  }
+}
+
+
+// Dropdown Tab 
+// --------------------------
+
+.tab-dropdown {
+  padding: 0 !important;
+  margin: 0;
+  border: 0 !important;
+  height: 40px;
+  color: #fff;
+  display: inline-block;
+  float: none;
+  opacity: 1;
+
+  .k-dropdown-wrap {
+
+    &.k-state-disabled {
+    border-color: #f6f6f6;
+    height: 36px;
+
+    .k-input {
+      color: #bdbebf;
+      font-weight: bold;
+      line-height: 2.2;
+    }
+
+    .k-select {
+      border-left: 0;
+
+      .k-i-arrow-s {
+        height: 36px;
+        background-position: -84px -66px;
+        }
+      }
+    }
+
+    &.k-state-default {
+      background: @gray-lighter;
+      border: 0;
+      height: 36px;
+
+      &.k-state-hover {
+        background-color: @sage-gray;
+        cursor: pointer;
+
+        .k-select {
+          background-color: @sage-gray;
+          cursor: pointer;
+
+          .k-i-arrow-s {
+            cursor: pointer !important;
+          }
+        }
+      }
+
+      &.k-state-focused,
+      &.k-state-focused .k-input {
+        box-shadow: none;
+        -webkit-box-shadow: none;
+      }
+
+      .k-input {
+        height: 34px;
+        color: #2e2e2e;
+        padding: 10px;
+        line-height: 0.8;
+        font-size: 14px;
+        outline: 0;
+        font-weight: bold;
+      }
+
+     .k-select {
+        background-color: @gray-lighter;
+        border-radius: 0;
+        border-left: 0;
+
+        .k-i-arrow-s {
+          height: 36px;
+          background-position: -84px -24px;
+        }
+      }
+    }
+  }
+}
+
+#tabInquiry.k-state-disabled .k-widget.k-dropdown {
+  pointer-events: auto; //AT-65748
+}
+
+// Specific to FF/IE
+
+.k-ff #tabInquiry .k-dropdown-wrap.k-state-default,
+.k-ie #tabInquiry .k-dropdown-wrap.k-state-default {
+  height: 37px;
+}

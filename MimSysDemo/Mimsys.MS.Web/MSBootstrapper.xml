@@ -1,0 +1,8 @@
+<bootstrapper>
+  <assemblies>
+    <add assembly="Mimsys.MS.*.dll" />
+  </assemblies>
+  <menuresx>
+    <add assembly="Mimsys.MS.Resources" name="MenuResx" />
+  </menuresx>
+</bootstrapper>
