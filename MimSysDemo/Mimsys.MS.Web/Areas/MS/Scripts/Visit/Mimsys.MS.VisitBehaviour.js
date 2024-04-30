@@ -271,6 +271,7 @@ var mSVisitUISuccess = {
             }
             mSVisitUISuccess.setkey();
 
+            sg.viewList.filter("mRDVisitGrid", 'PATCODE="MRN000000031"');
             sg.viewList.refresh("mRDVisitGrid");
             sg.viewList.refresh("patientPolicyGrid");
 
@@ -365,6 +366,8 @@ var mSVisitUISuccess = {
                 // 
           }
         }
+
+        sg.viewList.filter("mRDVisitGrid", 'PATCODE="MRN000000031"');
         sg.viewList.refresh("mRDVisitGrid");
         sg.viewList.refresh("patientPolicyGrid");
     },
